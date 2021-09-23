@@ -60,14 +60,10 @@
     to { transform: translateY(-6vh); }
 }
 
-header {
-    background: #333;
-    padding: 30px;
-
-    font-family: 'Source Code Pro', monospace;
-    font-size: 1.5rem;
-    color: #fff;
-}
+html, body {
+    overflow: hidden; 
+    margin: 0;
+} 
 
 #navigation {
     float: left;
