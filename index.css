@@ -60,11 +60,6 @@
     to { transform: translateY(-6vh); }
 }
 
-html, body {
-    overflow: hidden; 
-    margin: 0;
-} 
-
 #navigation {
     float: left;
     width: 5vw;
