@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SieR Portfolio</title>
+
+  <link rel="stylesheet" type="text/css" href="./index.css">
+
+  <script>
+    let currentPage = 0;
+
+    function changePage(page) {
+      if (page == currentPage) return;
+
+      const splitter = document.getElementById('splitter');
+      const indicator = document.getElementById('navigation-current-indicator');
+
+      splitter.style.animation = `splitterSpin${currentPage}${page} 1s ease-in-out forwards`;
+      indicator.style.animation = `indicatiorMove${currentPage}${page} 1s ease-in-out forwards`;
+
+      currentPage = page;
+    }
+
+    window.onload = function () {
+      const backgroundEl = document.getElementById('background');
+      backgroundEl.addEventListener('wheel', (event) => {
+        let newPage = currentPage + (event.deltaY < 0 ? -1 : 1);
+        if (newPage < 0) newPage = 0;
+        if (newPage > 2) newPage = 2;
+
+        changePage(newPage);
+      });
+    }
+  </script>
+</head>
+
+<body style="overflow: hidden; margin: 0;">
+  <div id="background">
+    <div id="navigation">
+      <div id="navigation-bar">
+        <div id="navigation-current-indicator"></div>
+        <div class="navigation-item"></div>
+        <div class="navigation-item"></div>
+        <div class="navigation-item"></div>
+      </div>
+    </div>
+    <div id="splitter"></div>
+  </div>
+</body>
+
+</html>

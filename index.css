@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+@keyframes splitterSpin01 {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(45deg); }
+}
+
+@keyframes splitterSpin02 {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(90deg); }
+}
+
+@keyframes splitterSpin12 {
+    from { transform: rotate(45deg); }
+    to { transform: rotate(90deg); }
+}
+
+@keyframes splitterSpin21 {
+    from { transform: rotate(90deg); }
+    to { transform: rotate(45deg); }
+}
+
+@keyframes splitterSpin20 {
+    from { transform: rotate(90deg); }
+    to { transform: rotate(0deg); }
+}
+
+@keyframes splitterSpin10 {
+    from { transform: rotate(45deg); }
+    to { transform: rotate(0deg); }
+}
+
+@keyframes indicatiorMove01 {
+    from { transform: translateY(-6vh); }
+    to { transform: translateY(0vh); }
+}
+
+@keyframes indicatiorMove02 {
+    from { transform: translateY(-6vh); }
+    to { transform: translateY(6vh); }
+}
+
+@keyframes indicatiorMove12 {
+    from { transform: translateY(0vh); }
+    to { transform: translateY(6vh); }
+}
+
+@keyframes indicatiorMove21 {
+    from { transform: translateY(6vh); }
+    to { transform: translateY(0vh); }
+}
+
+@keyframes indicatiorMove20 {
+    from { transform: translateY(6vh); }
+    to { transform: translateY(6vh); }
+}
+
+@keyframes indicatiorMove10 {
+    from { transform: translateY(0vh); }
+    to { transform: translateY(-6vh); }
+}
+
+header {
+    background: #333;
+    padding: 30px;
+
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+#navigation {
+    float: left;
+    width: 5vw;
+    height: 100vh;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    mix-blend-mode: difference;
+
+    position: absolute;
+
+    z-index: 10;
+}
+
+.navigation-item {
+    width: 1vh;
+    height: 4vh;
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    overflow: visible;
+
+    background-color: #DDD;
+    border-radius: 10%;
+
+    margin: 2vh;
+    mix-blend-mode: difference;
+}
+
+#navigation-current-indicator {
+    position: absolute;
+
+    width: 0.5vh;
+    height: 3vh;
+
+    background-color: #EEE;
+    border-radius: 20%;
+
+    top: 48.5%;
+    left: 30%;
+}
+
+#background {
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #333;
+    z-index: -1;
+}
+
+#splitter {
+    position: absolute;
+    overflow: visible;
+
+    transform-origin: 0% 50%;
+    left: 50%;
+    bottom: -150%;
+
+    width: 100vw;
+    height: 400vh;
+
+    background-color: #EEE;
+
+    z-index: 0;
+}
