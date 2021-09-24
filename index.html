@@ -11,8 +11,10 @@
 
   <script>
     let currentPage = 0;
+    let canScroll = true;
 
     function changePage(page) {
+      if (!canScroll) return;
       if (page === currentPage) return;
 
       const splitter = document.getElementById('splitter');
@@ -22,6 +24,11 @@
       indicator.style.animation = `indicatiorMove${currentPage}${page} 1s ease-in-out forwards`;
 
       currentPage = page;
+      canScroll = false;
+
+      setTimeout(() => {
+        canScroll = true;
+      }, 1000);
     }
 
     window.onload = function () {
