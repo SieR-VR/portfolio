@@ -13,7 +13,7 @@
     let currentPage = 0;
 
     function changePage(page) {
-      if (page == currentPage) return;
+      if (page === currentPage) return;
 
       const splitter = document.getElementById('splitter');
       const indicator = document.getElementById('navigation-current-indicator');
@@ -42,9 +42,9 @@
     <div id="navigation">
       <div id="navigation-bar">
         <div id="navigation-current-indicator"></div>
-        <div class="navigation-item"></div>
-        <div class="navigation-item"></div>
-        <div class="navigation-item"></div>
+        <div class="navigation-item" onclick="changePage(0)"></div>
+        <div class="navigation-item" onclick="changePage(1)"></div>
+        <div class="navigation-item" onclick="changePage(2)"></div>
       </div>
     </div>
     <div id="splitter"></div>

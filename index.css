@@ -52,7 +52,7 @@
 
 @keyframes indicatiorMove20 {
     from { transform: translateY(6vh); }
-    to { transform: translateY(6vh); }
+    to { transform: translateY(-6vh); }
 }
 
 @keyframes indicatiorMove10 {
@@ -103,6 +103,8 @@
 
     top: 48.5%;
     left: 30%;
+
+    transform: translateY(-6vh);
 }
 
 #background {
